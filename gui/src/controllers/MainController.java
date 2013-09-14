@@ -1,9 +1,15 @@
-package main;
+package controllers;
 
 import java.awt.Button;
 import java.awt.Panel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
+import utils.Constants;
+
+import containers.MapContainer;
+
+import main.Game;
 
 public class MainController implements ActionListener {
 
@@ -19,21 +25,15 @@ public class MainController implements ActionListener {
 		Object source = ae.getSource();
 		if (source instanceof Button) {
 			Button btn = (Button) source;
-			if (btn.getLabel() == "Match Provinces with Capitals") {
+			if (btn.getLabel() == Constants.MPWC_BTN_TEXT) {
 				this.game.renderMPWC();
-				
 				System.out.println("MPWC was clicked!");
-
-			} else if (btn.getLabel() == "Find Provinces") {
+			} else if (btn.getLabel() == Constants.FP_BTN_TEXT) {
 				this.game.renderFP();
-				@SuppressWarnings("unused")
-				Panel mapPanel = new MapContainer();
 				System.out.println("FP was clicked");
-
-			} else if (btn.getLabel() == "About") {
+			} else if (btn.getLabel() == Constants.ABOUT_BTN_TEXT) {
 				this.game.renderAbout();
 				System.out.println("about was clicked");
-
 			}
 		}
 	}
