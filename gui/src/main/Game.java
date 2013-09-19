@@ -39,16 +39,16 @@ public class Game extends Applet {
 		this.renderMainView();
 	}
 
-	private void renderMainView() {
-		this.setLayout(new BorderLayout());	
-		this.add(this.views.get(Constants.MAIN_VIEW_POS), BorderLayout.CENTER);
-		this.validate();
-	}
-
 	public void clear() {
 		this.removeAll();
 		this.invalidate();
 	}
+	
+	public void renderMainView() {
+		this.setLayout(new BorderLayout());	
+		this.add(this.views.get(Constants.MAIN_VIEW_POS), BorderLayout.CENTER);
+		this.validate();
+	}	
 
 	public void renderMPWC() {
 		//TODO to be implemented
