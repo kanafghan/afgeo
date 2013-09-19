@@ -6,17 +6,15 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import utils.Constants;
+import views.AFGMap;
 
-import containers.MapContainer;
 
 import main.Game;
 
-public class MainController implements ActionListener {
-
-	Game game;
+public class MainController extends GController {
 
 	public MainController(Game game) {
-		this.game = game;
+		super(game);
 	}
 
 	@Override
@@ -29,7 +27,7 @@ public class MainController implements ActionListener {
 				this.game.renderMPWC();
 				System.out.println("MPWC was clicked!");
 			} else if (btn.getLabel() == Constants.FP_BTN_TEXT) {
-				this.game.renderFP();
+				this.game.renderFPView();
 				System.out.println("FP was clicked");
 			} else if (btn.getLabel() == Constants.ABOUT_BTN_TEXT) {
 				this.game.renderAbout();

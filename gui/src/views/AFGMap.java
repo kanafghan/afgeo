@@ -1,4 +1,4 @@
-package containers;
+package views;
 
 import java.awt.Color;
 import java.awt.Dimension;
@@ -7,16 +7,15 @@ import java.awt.Panel;
 
 import main.Game;
 
-public class MapContainer extends Panel {
+public class AFGMap extends GContainer {
 	private static final long serialVersionUID = 1L;
-	private Game game;
-
-	public MapContainer(Game game) {
-		this.game = game;
+	
+	public AFGMap(GView parent) {
+		super(parent);
 	}
-
+	
 	public void init() {
-		this.setSize(new Dimension(500, 300));
+		//this.setSize(new Dimension(500, 300));
 	}
 	
 	public void paint(Graphics g) {
