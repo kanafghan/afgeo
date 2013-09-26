@@ -12,4 +12,16 @@ public class MPWCDashboard extends GContainer {
 		// TODO Auto-generated constructor stub
 	}
 
+	@Override
+	public void init() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void render() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

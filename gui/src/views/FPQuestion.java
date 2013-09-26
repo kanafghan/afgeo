@@ -1,15 +1,36 @@
 package views;
 
-public class FPQuestion extends FPDashboard {
+import java.awt.Button;
+import java.awt.Dimension;
+import java.awt.FlowLayout;
+import java.awt.GridLayout;
+import java.awt.Label;
+import java.awt.Panel;
+
+import utils.Constants;
+
+public class FPQuestion extends Panel {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 
-	public FPQuestion(GView parent) {
-		super(parent);
-		// TODO Auto-generated constructor stub
+	private GContainer parent;
+
+	public FPQuestion(GContainer parent) {
+		this.parent = parent;
+		this.render();
 	}
 
+	private void render() {		
+		this.setLayout(new GridLayout(5, 1));
+
+		// The question?
+		Label question = new Label("Which province is highlighted?");
+		this.add(question);
+		for (int i = 0; i < 4; i++) {
+			this.add(new Button("Answer " + (i + 1)));
+		}
+	}
 }

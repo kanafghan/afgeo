@@ -3,34 +3,55 @@ package views;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
+import java.awt.Image;
 import java.awt.Panel;
+import java.io.File;
+import java.io.IOException;
+
+import javax.imageio.ImageIO;
+
+import utils.Constants;
 
 import main.Game;
 
 public class AFGMap extends GContainer {
 	private static final long serialVersionUID = 1L;
-	
+	private String base;
+
 	public AFGMap(GView parent) {
 		super(parent);
+		this.base = Constants.PROVINCE_IMAGES_FOLDER;
 	}
-	
-	public void init() {
-		//this.setSize(new Dimension(500, 300));
-	}
-	
+
 	public void paint(Graphics g) {
-		final int MID = 150;
-		final int TOP = 50;
+		this.setBackground(Color.white);
+
+		File imgfile = new File(this.base +"afg-map.png");
+		if (imgfile.exists()) {
+			Image image;
+			try {
+				image = ImageIO.read(imgfile);
+				g.drawImage(image, 1, 15, null);
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
+		}
+		else {
+			System.out.println("image not found!!");
+		}
+	}
+
+	@Override
+	public void init() {
+		// TODO Auto-generated method stub
 		
-		this.setBackground(Color.cyan);
+	}
+
+	@Override
+	public void render() {
+		// TODO Auto-generated method stub
 		
-		g.setColor(Color.BLUE);
-		g.drawLine(TOP, MID, 50, 70);
-		
-		g.setColor(Color.black);
-		g.fillOval(MID - 20, TOP, 40, 40);
-		g.drawString("Bah Bah", 100, 50);
-		 
-		//TODO add map here
 	}
 }

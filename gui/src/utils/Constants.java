@@ -6,7 +6,7 @@ public class Constants {
 	public static final String FP_BTN_TEXT = "Find Provinces";
 	public static final String ABOUT_BTN_TEXT = "About";
 	
-	public static final int WIN_WIDTH = 700;
+	public static final int WIN_WIDTH = 720;
 	public static final int WIN_HEIGHT = 400;
 	
 	// Positions of views in the game
@@ -14,4 +14,7 @@ public class Constants {
 	public static final int FP_VIEW_POS = 1; 	// Position of FPView
 	public static final int MPWC_VIEW_POS = 2; 	// Position of MPWCView
 	public static final int ABOUT_VIEW_POS = 3; // Position of AboutView
+	
+	// IO constants
+	public static final String PROVINCE_IMAGES_FOLDER = "../images/provinces/";
 }

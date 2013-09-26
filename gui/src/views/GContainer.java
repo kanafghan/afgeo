@@ -2,7 +2,7 @@ package views;
 
 import java.awt.Panel;
 
-public class GContainer extends Panel {
+public abstract class GContainer extends Panel {
 
 	/**
 	 * 
@@ -13,12 +13,14 @@ public class GContainer extends Panel {
 	
 	public GContainer(GView parent) {
 		this.parent = parent;
+		this.init();
 		this.render();
 	}
+	
+	public abstract void init();
 
-	public void render() {
-		
-	}
+	public abstract void render();
 
 	//TODO to be implemented (implement the back button)
+	// move the implementation to a subclass GDashboard
 }
