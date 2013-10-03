@@ -12,7 +12,7 @@ public class MPWCController extends GController {
 	}
 
 	public void actionPerformed(ActionEvent ae) {
-
+		super.actionPerformed(ae);
 	}
 
 }

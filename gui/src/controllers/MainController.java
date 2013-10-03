@@ -19,17 +19,20 @@ public class MainController extends GController {
 
 	@Override
 	public void actionPerformed(ActionEvent ae) {
-		this.game.clear();
+		super.actionPerformed(ae);
 		Object source = ae.getSource();
 		if (source instanceof Button) {
 			Button btn = (Button) source;
 			if (btn.getLabel() == Constants.MPWC_BTN_TEXT) {
+				this.game.clear();
 				this.game.renderMPWC();
 				System.out.println("MPWC was clicked!");
 			} else if (btn.getLabel() == Constants.FP_BTN_TEXT) {
+				this.game.clear();
 				this.game.renderFPView();
 				System.out.println("FP was clicked");
 			} else if (btn.getLabel() == Constants.ABOUT_BTN_TEXT) {
+				this.game.clear();
 				this.game.renderAbout();
 				System.out.println("about was clicked");
 			}

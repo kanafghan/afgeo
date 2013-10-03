@@ -28,10 +28,10 @@ public class FPView extends GView {
 
 	@Override
 	public void init() {
+		this.controller = new FPController(game);
+
 		this.containers.add(MAP_POS, new AFGMap(this));
 		this.containers.add(DASHBOARD_POS, new FPDashboard(this));
-		
-		this.controller = new FPController(game);
 	}
 
 	@Override

@@ -10,7 +10,7 @@ import java.awt.Panel;
 
 import utils.Constants;
 
-public class FPDashboard extends GContainer {
+public class FPDashboard extends GDashboard {
 
 	/**
 	 * 
@@ -26,6 +26,7 @@ public class FPDashboard extends GContainer {
 	
 	@Override
 	public void init() {
+		super.init();
 		this.statusbar = new FPStatusbar(this);
 		this.question = new FPQuestion(this);
 	}	
@@ -35,13 +36,15 @@ public class FPDashboard extends GContainer {
 	 */
 	@Override
 	public void render() {
+		super.render();
 		BorderLayout layout = new BorderLayout();
 		layout.setVgap(15);
 		int w = (int) (Constants.WIN_WIDTH * 0.30);
 		this.setPreferredSize(new Dimension(w, Constants.WIN_HEIGHT));
 		
 		this.add(new Button("Start the Game"), BorderLayout.CENTER);
-		this.add(new Button("Back"), BorderLayout.SOUTH);
+		
+		this.add(this.backBtn, BorderLayout.SOUTH);
 		
 //		this.add(statusbar, BorderLayout.NORTH);
 //		this.add(question, BorderLayout.CENTER);

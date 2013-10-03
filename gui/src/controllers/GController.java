@@ -1,7 +1,10 @@
 package controllers;
 
+import java.awt.Button;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
+import utils.Constants;
 
 import main.Game;
 
@@ -14,8 +17,17 @@ public abstract class GController implements ActionListener {
 	}
 	
 	@Override
-	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
+	public void actionPerformed(ActionEvent ae) {
+		Object source = ae.getSource();
+		if (source instanceof Button) {
+			Button btn = (Button) source;
+			if (btn.getLabel() == Constants.BACK_BTN_TEXT) {
+				System.out.println("Back button clicked!");
+				game.clear();
+				game.renderMainView();
+			}
+		}
+		System.out.println("Action Performed!");
 
 	}
 

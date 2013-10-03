@@ -1,6 +1,6 @@
 package views;
 
-public class MPWCDashboard extends GContainer {
+public class MPWCDashboard extends GDashboard {
 
 	/**
 	 * 
@@ -14,12 +14,12 @@ public class MPWCDashboard extends GContainer {
 
 	@Override
 	public void init() {
-		// TODO Auto-generated method stub
-		
+		super.init();
 	}
 
 	@Override
 	public void render() {
+		super.render();
 		// TODO Auto-generated method stub
 		
 	}
