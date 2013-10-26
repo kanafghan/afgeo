@@ -63,4 +63,9 @@ public class Game extends Applet {
 	public void renderAbout() {
 		//TODO to be implemented 
 	}
+
+	public void startGame() {
+		// TODO Auto-generated method stub
+		
+	}
 }

@@ -24,6 +24,35 @@ public class FPDashboard extends GDashboard {
 		super(parent);
 	}
 	
+	public void startGame(){
+		
+		
+		this.clear();
+		this.renderStatusbar();
+		this.renderQuestion();
+		this.renderBackBtn();
+	}
+	
+	private void renderBackBtn() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private void renderQuestion() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private void renderStatusbar() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private void clear() {
+		// TODO Auto-generated method stub
+		
+	}
+
 	@Override
 	public void init() {
 		super.init();

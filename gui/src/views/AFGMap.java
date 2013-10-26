@@ -23,10 +23,14 @@ public class AFGMap extends GContainer {
 		this.base = Constants.PROVINCE_IMAGES_FOLDER;
 	}
 
+	public void drawMap() {
+	//	this.mapName = randomProvince.getMap();
+	}
+
 	public void paint(Graphics g) {
 		this.setBackground(Color.white);
 
-		File imgfile = new File(this.base +"afg-map.png");
+		File imgfile = new File(this.base + "afg-map.png");
 		if (imgfile.exists()) {
 			Image image;
 			try {
@@ -37,8 +41,7 @@ public class AFGMap extends GContainer {
 				e.printStackTrace();
 			}
 
-		}
-		else {
+		} else {
 			System.out.println("image not found!!");
 		}
 	}
@@ -46,12 +49,12 @@ public class AFGMap extends GContainer {
 	@Override
 	public void init() {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void render() {
 		// TODO Auto-generated method stub
-		
+
 	}
 }

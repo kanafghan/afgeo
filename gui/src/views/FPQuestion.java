@@ -22,7 +22,19 @@ public class FPQuestion extends Panel {
 		this.parent = parent;
 		this.render();
 	}
+	public void ask(){
+		this.getRandomProvince();
+		this.renderQuestion();
+	}
 
+	private void renderQuestion() {
+		// TODO Auto-generated method stub
+		
+	}
+	private void getRandomProvince() {
+		// TODO Auto-generated method stub
+		
+	}
 	private void render() {		
 		this.setLayout(new GridLayout(5, 1));
 

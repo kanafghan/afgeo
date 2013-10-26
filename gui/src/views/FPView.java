@@ -41,4 +41,7 @@ public class FPView extends GView {
 		this.add(this.containers.get(MAP_POS), BorderLayout.CENTER);
 		this.add(this.containers.get(DASHBOARD_POS), BorderLayout.EAST);
 	}
+	public AFGMap getAFGMap(){
+     return null;		
+	}
 }
