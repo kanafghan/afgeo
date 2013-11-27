@@ -7,6 +7,7 @@ import java.awt.FlowLayout;
 import java.awt.GridLayout;
 import java.awt.Label;
 import java.awt.Panel;
+import java.awt.event.ActionListener;
 
 import utils.Constants;
 
@@ -16,6 +17,8 @@ public class FPDashboard extends GDashboard {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+
+	private static final ActionListener FPController = null;
 	
 	private FPStatusbar statusbar;
 	private FPQuestion question;
@@ -74,6 +77,12 @@ public class FPDashboard extends GDashboard {
 		this.add(new Button("Start the Game"), BorderLayout.CENTER);
 		
 		this.add(this.backBtn, BorderLayout.SOUTH);
+		
+		
+		Button startTheGameBtn = new Button(Constants.MPWC_BTN_TEXT);
+		startTheGameBtn.setBounds(20, 70, 100, 40);
+		this.add(startTheGameBtn);
+		startTheGameBtn.addActionListener(this.FPController);
 		
 //		this.add(statusbar, BorderLayout.NORTH);
 //		this.add(question, BorderLayout.CENTER);
